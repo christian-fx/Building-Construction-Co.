@@ -1,0 +1,248 @@
+/* css/styles.css */
+
+/* Hamburger to X animation */
+.hamburger-menu {
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.mobile-menu {
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* Form styling */
+.form-input:focus {
+    box-shadow: 0 0 0 3px rgba(244, 184, 47, 0.2);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+/* Testimonial slider scrollbar hide */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* Trust badges animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
+}
+
+.trust-badge {
+    min-width: 220px;
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.dark .trust-badge {
+    background: #1e1e1e;
+    border-color: #2a2a2a;
+}
+
+.trust-badge span {
+    font-size: 3rem;
+    color: #F4B82F;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.trust-badge p {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.dark .trust-badge p {
+    color: #d1d5db;
+}
+
+.trust-badge:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Counter items */
+.counter-item {
+    transition: all 0.3s ease;
+}
+
+.counter-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Service cards */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Team cards */
+.team-card {
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+}
+
+.team-image {
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-image {
+    transform: scale(1.05);
+}
+
+/* Project cards */
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+/* Progress steps for quote form */
+.progress-step {
+    transition: all 0.3s ease;
+}
+
+.progress-step.active {
+    background-color: #F4B82F;
+    color: #1F2937;
+}
+
+.progress-step.completed {
+    background-color: #10B981;
+    color: white;
+}
+
+/* Budget slider */
+.budget-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #F4B82F;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.budget-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #F4B82F;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Form steps */
+.form-step {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* FAQ functionality */
+.faq-answer {
+    display: none;
+}
+
+.faq-answer.active {
+    display: block;
+}
+
+/* Image masks for about page */
+.mask-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+}
+
+.mask-item-1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.mask-item-2 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    border-bottom-left-radius: 40px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.mask-item-3 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    border-bottom-right-radius: 40px;
+    overflow: hidden;
+    height: 100%;
+}
